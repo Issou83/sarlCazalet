@@ -1,0 +1,72 @@
+.laPourVous {
+    height: 650px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../assets/camion11.webp) center/cover no-repeat;
+    background-position:  0px -80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 400px;
+    text-align: center;
+    color: white;
+} 
+
+
+
+.laPourVous h1 {
+padding: 100px  100px 230px 100px;
+    
+}
+
+.mobileFixe, .joursHeures {
+    border-top: 3px solid  rgb(13, 55, 169);
+    border-bottom: 3px solid  rgb(13, 55, 169);
+    margin-bottom: 50px;
+}
+
+.laPourVous h2 {
+
+}
+
+.cardContact {
+    color: black;
+    position: absolute;
+    text-align: center;
+    width: 70%;
+    padding: 30px;
+    top: 400px;
+    background-color: white;
+    box-shadow: 0px 10px 10px black;
+    margin-bottom: 900px;
+}
+
+.mobileFixe {
+    display: flex;
+    justify-content: space-between;
+}
+
+.caseContact {
+    width: 33.33%;
+}
+
+.iconContact {
+    max-height: 30px;
+}
+
+.tel1 {
+height: 20px;
+margin: 5px;
+}
+
+.smartphone {
+
+}
+
+.mail {
+    height: 18px;
+    margin: 6px;
+}
+
+.calendar {
+    margin-top: 20px;
+    width: 20px;
+}

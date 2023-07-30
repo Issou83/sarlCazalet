@@ -1,0 +1,293 @@
+/* Section 1: Styles de base des éléments */
+.home {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 100px;
+}
+
+.card {
+  color: rgb(255, 255, 255);
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  box-shadow: 2px 2px 3px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  height: 200px;
+  margin-top: 40px;
+  padding-top: 100px;
+  padding-bottom: 150px;
+  box-shadow: 2px 5px 9px black;
+  border-radius: 10px;
+  background-size: 100%;
+}
+
+.card:hover {
+  animation: backAnimate 0.8s ease-in-out;
+  background-size: 140%;
+}
+
+@keyframes backAnimate {
+  0% {
+    background-size: 120%;
+  }
+
+  100% {
+    background-size: 140%;
+  }
+}
+
+.card p {
+  font-size: 24px;
+}
+
+.cardTitle {
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* Section 2: Styles spécifiques des éléments */
+.clients {
+  margin: 0;
+}
+
+.btnContact {
+  background: linear-gradient(0.75turn, #000000 0%, rgb(94, 94, 172) 100%);
+  box-shadow: 2px 2px 5px rgb(0, 0, 0);
+  color: white;
+  border: 1px solid white;
+}
+
+.btnContact:hover {
+  animation: animate 0.8s ease-in-out;
+  scale: 1.1;
+  cursor: pointer;
+}
+
+/* Section 3: Styles de mise en page */
+.presentation {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../../assets/JP.png") center/cover no-repeat;
+  background-size: 120%;
+  width: 95%;
+  margin: 50px 0;
+}
+
+.services {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
+    url("../../assets/camion33.png") center/cover no-repeat;
+  background-position: 60%;
+  background-size: 120%;
+  padding: 100px 0;
+  margin-top: 150px;
+}
+
+.servicesCamera {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
+    url("../../assets/passageCamera1.jpg") center/cover no-repeat;
+  background-position: 60%;
+  background-size: 120%;
+  padding: 100px 0;
+  margin-top: 150px;
+}
+.location {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
+    url("../../assets/exloc.png") center/cover no-repeat;
+  background-position: 60%;
+  background-size: 120%;
+  padding: 100px 0;
+  margin-top: 150px;
+}
+
+/* Section 4: Media Queries */
+@media screen and (max-width: 992px) {
+  .card {
+    background-size: 150%;
+    height: 110px;
+  }
+
+  .presentation, .services, .servicesCamera {
+    background-size: 150%;
+  }
+
+  .card:hover {
+    animation: backAnimate 0.8s ease-in-out;
+    background-size: 170%;
+  }
+
+  @keyframes backAnimate {
+    0% {
+      background-size: 150%;
+    }
+
+    100% {
+      background-size: 170%;
+    }
+  }
+
+  .cardTitle {
+    font-size: 30px;
+  }
+  .card p {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .card {
+    height: 110px;
+    background-position: 50% 30%;
+  }
+
+  .presentation, .services, .servicesCamera {
+    background-size: 290%;
+    width: 90%;
+  }
+
+  .card:hover {
+    animation: backAnimate 0.8s ease-in-out;
+    background-size: 350%;
+  }
+
+  .servicesCamera {
+    background-position: 30% 50%;
+    margin-top: 80px;
+    padding: 80px 0;
+
+  }
+
+  @keyframes backAnimate {
+    0% {
+      background-size: 290%;
+    }
+
+    100% {
+      background-size: 350%;
+    }
+  }
+
+  .cardTitle {
+    font-size: 20px;
+  }
+  .card p {
+    font-size: 16px;
+  }
+}
+
+/* Section 5: Autres éléments et fonctionnalités spécifiques */
+.secCard {
+  color: rgb(0, 0, 0);
+  padding: 0 1%;
+  position: absolute;
+  height: 200px;
+  width: 50%;
+  box-shadow: 2px 5px 8px rgb(0, 0, 0);
+  border-radius: 5px;
+  bottom: -30px;
+  background-color: rgba(255, 255, 255, 0.268);
+}
+
+p.secCardTitle {
+  margin-top: 30px;
+  font-size: 18px;
+  color: white;
+}
+
+.secCardCheck {
+  display: flex;
+  height: 65%;
+}
+
+h2 {
+  font-size: 14px;
+  margin: 0 3px;
+}
+
+.setCardDetails {
+  width: 25%;
+  height: 100%;
+  opacity: 0;
+  transition: 1s;
+  height: 0;
+}
+
+.apparition {
+  opacity: 1;
+  height: 150px;
+}
+
+.sep {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+}
+
+.setCardDetails p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.secCardIcon {
+  width: 25px;
+}
+
+.timer {
+  width: 20px;
+}
+
+.descriptionsServices {
+  position: absolute;
+  max-width: 50%;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 992px) {
+  .secCard {
+    bottom: 50px;
+    min-width: 306px;
+    padding: 0px 0px;
+  }
+
+  .secCardCheck h2 {
+    font-size: 12px;
+  }
+
+  p.secCardTitle {
+    margin-top: 30px;
+    font-size: 13px;
+    color: white;
+  }
+
+  .secCardIcon {
+    width: 15%;
+  }
+  .secCardIcon {
+    width: 20px;
+  }
+  .timer {
+    width: 14px;
+  }
+  .descriptionsServices {
+    font-size: 50px;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.display {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}

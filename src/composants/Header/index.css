@@ -1,0 +1,155 @@
+.top {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  position: fixed;
+  /* background-image: url("../../assets/ossau2.jpg"); */
+  background: linear-gradient(0.25turn, #bdc2c7, rgb(13, 55, 169) 30%);
+  background-repeat: no-repeat;
+  object-fit: unset;
+  width: 100%;
+  height: 100px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 2px 7px black;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  transition: 0.15s;
+}
+.small {
+  height: 50px;
+  transition: 1s;
+}
+
+.small .logoCam {
+  width: 75px;
+  transition: 1s;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  right: 0%;
+  transition: 0.1s;
+  z-index: 2;
+}
+
+.row {
+  /* position: fixed;
+  content: "";
+  position: relative; */
+  right: 1%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  width: 100%;
+  /* top: 0px; */
+  transition: 1s;
+  z-index: 2;
+}
+
+.title { 
+  font-size:26px;
+  content: "";
+  position: absolute;
+  left: 12%;
+  color: #f8f8f8;
+}
+
+.logoCam {
+  width: 150px;
+  color: aliceblue;
+}
+
+.navigation {
+  content: "";
+  position: absolute;
+
+  /* flex-direction: column; */
+
+  padding: 0px 1%;
+  max-width: 100%;
+  display: flex;
+}
+
+.btnNav {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  height: 15px;
+  margin: 2px;
+  padding: 2px 10px;
+  color: white;
+  border: 1px solid rgb(0, 0, 0);
+  background: linear-gradient(0.75turn, #181927 0%, rgb(13, 55, 169) 100%);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.btnNav:active {
+  color: black;
+  background: white;
+}
+
+@keyframes animate {
+  0% {
+    scale: 1;
+    /* box-shadow: 1px 2px 5px rgb(0, 0, 0); */
+  }
+  50% {
+    scale: 1.12;
+    /* box-shadow: 1px 4px 5px rgb(0, 0, 0); */
+  }
+  100% {
+    scale: 1.1;
+    /* box-shadow: 2px 4px 5px rgb(0, 0, 0); */
+  }
+}
+
+.btnNav:hover {
+  animation: animate 0.8s ease-in-out;
+  scale: 1.1;
+  box-shadow: 2px 4px 5px rgb(0, 0, 0);
+  border-radius: 7px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.tel {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btnTel {
+  color: white;
+  background-color: rgb(13, 55, 169);
+  border: none;
+  height: 30px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 7px black;
+}
+
+.btnTel h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.camion22 {
+  display: none;
+position: absolute;
+width: 6.5%;
+top: 5.5%;
+right: 0px;
+top: -5px;
+}
