@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footerElement">
-        <p>1</p>
+        <p></p>
       </div>
       <div className="footerElement">
         {/* <p>2</p> */}
