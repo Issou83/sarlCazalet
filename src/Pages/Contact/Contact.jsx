@@ -1,9 +1,11 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+
 import "./index.css";
 import Telephone from "../../assets/tel.png";
 import Smartphone from "../../assets/smartphone.png";
 import Mail from "../../assets/mail.png";
-import Calendar from "../../assets/calendar.png"
+import Calendar from "../../assets/calendar.png";
 
 const Contact = () => {
   return (
@@ -20,34 +22,33 @@ const Contact = () => {
           <p>Intervention d'urgence possible le week-end et jours fériés.</p>
           <div className="contactTel">
             <h2>Contactez-nous</h2>
+
             <div className="mobileFixe">
-              <div className="caseContact">
-                <h3>Téléphone</h3>
-                <img src={Telephone} alt="" className="iconContact tel1" />
-                <p>05 59 30 81 34</p>
-              </div>
-              <div className="caseContact">
+            <a href="tel:0559308134">
+                <div className="caseContact">
+                  <h3>Téléphone</h3>
+                  <img src={Telephone} alt="" className="tel1" />
+                  05 59 30 81 34
+                </div>
+              </a>
+              <a href="tel:0615285911">
+                <div className="caseContact">
                 <h3>Mobile</h3>
-                <img
-                  src={Smartphone}
-                  alt=""
-                  className="iconContact smartphone"
-                />
-
-                <p>06 15 28 59 11</p>
-              </div>
-              <div className="caseContact">
-                <h3>Email</h3>
-                <img src={Mail} alt="" className="iconContact mail" />
-
-                <p>jean-pierre.cazalet@wanadoo.fr</p>
-              </div>
+                  <img src={Smartphone} alt="" className="smartphone"/>06 15 28 59 11
+                </div>
+              </a>
+              <a href="mailto:jean-pierre.cazalet@wanadoo.fr">
+                <div className="caseContact">
+                <h3>E-MAIL</h3>
+                <img src={Mail} alt="" className="mail" />jean-pierre.cazalet@wanadoo.fr
+                </div>
+              </a>
             </div>
           </div>
           <div className="horaires">
-              <h2>Nos horaires</h2>
+            <h2>Nos horaires</h2>
             <div className="joursHeures">
-                <img src={Calendar} alt="" className="calendar" />
+              <img src={Calendar} alt="" className="calendar" />
               <p>
                 7/7 <br /> 07:00 à 20h00
               </p>

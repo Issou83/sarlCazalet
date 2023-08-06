@@ -27,10 +27,11 @@ const Home = () => {
           ~ sarl Cazalet ~<br />
           Entreprise spécialisée en hydrocurage et locations de materiels <br />
         </h1>
-        <p className="clients">(Collectivitées / Professionels / Particuliers)</p>
-        <NavLink to="/contact" >
-
-        <button className="btnContact">Contactez-nous</button>
+        <p className="clients">
+          (Collectivitées / Professionels / Particuliers)
+        </p>
+        <NavLink to="/contact">
+          <button className="btnContact">Contactez-nous</button>
         </NavLink>
 
         <div className="secCard">
@@ -112,7 +113,6 @@ const Home = () => {
         onMouseEnter={() => setIsHoveredServicesCamera(true)}
         onMouseLeave={() => setIsHoveredServicesCamera(false)}
       >
-
         <h2
           className={`cardTitle ${
             isHoveredServicesCamera ? "hidden" : "display"
@@ -125,8 +125,14 @@ const Home = () => {
             isHoveredServicesCamera ? "display" : "hidden"
           }`}
         >
-                   Tout ce dont vous avec besoin pour entretenir vos exterieurs, vous aider dans vos évenements (fêtes/concerts/rassemblements) et bien plus...<br/>Cliquez pour découvrir tout nos équipements !
-
+          Pour vos événements, chantiers, manifestations (sportives, foires,
+          fêtes...) nous vous proposons un service de location de WC autonome.
+          <br />
+          Et tout ce dont vous avec besoin pour entretenir vos exterieurs...
+          <br />
+          Pour particuliers, professionnels et collectivités.
+          <br />
+          Cliquez pour découvrir tout nos équipements !
         </p>
       </div>
     </div>

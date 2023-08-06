@@ -9,3 +9,15 @@ body {
   display: block;
   justify-content: center;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:active {
+  color: red;
+}
+
+a:visited {
+
+}
