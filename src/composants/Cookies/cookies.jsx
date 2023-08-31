@@ -4,10 +4,10 @@ const cookies = () => {
   return (
     <div>
       <p>
-        <p className="cookiesTitle">
+        <h1 className="cookiesTitle">
           Politique de gestion des cookies de SARL Cazalet à Arudy
-        </p>
-        <p className="cookiesTitleSec">Cookies essentiels.</p>
+        </h1>
+        <h2 className="cookiesTitleSec">Cookies essentiels.</h2>
         <p>
           Ils sont strictement nécessaires à l'utilisation du service et
           permettent l'utilisation des principales fonctionnalités du site,
@@ -50,32 +50,45 @@ const cookies = () => {
           Confidentialité, cliquez sur le bouton Paramètres de contenu - Dans la
           section Cookies, sélectionnez Interdire à tous les sites de stocker
           des données et cochez la case Bloquer les cookies et les données de
-          site ters, puis cliquez sur C
+          site ters, puis cliquez sur OK
         </li>
       </ul>
-      <p className="cookiesTitleSec">Cookies fonctionnels de mesure d'audience et statistiques.</p>
-      <p>Il nous permettent de faire vivre le site et d'établi des statistiques et comptages de frequentation et d'utisation de ses rubriques et contenues, pour réaliser des études afin d'améliorer le contenu (mesure du nombre de visites,
-         de pages vues ou encore de l'activité des visiteurs sur le site et de leur Fréquence de retour).
+      <h2 className="cookiesTitleSec">Cookies fonctionnels de mesure d'audience et statistiques.</h2>
+      <p>
+        Ils nous permettent de faire vivre le site et d'établi des statistiques et comptages de frequentation et d'utisation de ses rubriques et contenues, pour réaliser des études afin d'améliorer le contenu (mesure du nombre de visites,
+        de pages vues ou encore de l'activité des visiteurs sur le site et de leur Fréquence de retour).
         Ils nous permettent également d'analyser la navigation des internautes afin d'améliorer notre service ou de détecter des dysfonctionnements.
         Nous déposons également des cookies de mesure d'audience exemptés de consentement grace à notre outil de mesure d'audience AT Internet. Les données collectées dans ce cadre ne
         permettent pas de suivre votre magation sur d'autres sites tiers
         Vous pouvez désactiver ces cookies exemptes de consentergent en cochant la case suivante O
-        </p>
-        <p className="cookiesTitleSec">Cookies de commercialisation.</p>
-        <p>ils sont susceptibles d'être placés dans votre terminal, afin d'identifier vos centres d'interêt au travers des produits consultés sur notre site et de collecter des données de navigation afin de personnaliser l'offre publicitaire qui vous est adressée et en dehors de nos sites.
-            Vous pouvez vous opposer à l'usage de vos données de navigation à des fins publicitaires par nos partenaires
-            Vous pouvez galament vous opposer à tout les cookies bars depuit votre navigateur
-        </p>
-        <ul>
-            <li>1/ Si vous utilisez un navigateur internet Explorer
-
-                Dansinternet Explore cliquez te bouton Ounis, pois sur Options internet
-
-Sous fonglet Confidentialite sous Cookie activer loption isloquer tous les cookies ties, puis cliquez sur ÜK</li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+      </p>
+      <h2 className="cookiesTitleSec">Cookies de commercialisation.</h2>
+      <p>
+        Ils sont susceptibles d'être placés dans votre terminal, afin d'identifier vos centres d'interêt au travers des produits consultés sur notre site et de collecter des données de navigation afin de personnaliser l'offre publicitaire qui vous est adressée et en dehors de nos sites.
+        Vous pouvez vous opposer à l'usage de vos données de navigation à des fins publicitaires par nos partenaires
+        Vous pouvez galament vous opposer à tout les cookies bars depuit votre navigateur
+      </p>
+      <ul>
+          <li>
+            1/ Si vous utilisez un navigateur internet Explorer
+            Dans internet Explore cliquez le bouton "Outils", puis sur "Options internet"
+            Sous l'onglet Confidentialité, sous Cookie activez l'option Bloquer tous les cookies tiers, puis cliquez sur OK
+          </li>
+          <li>
+            2/Si vous utilisez le navigateur Firefox <br />  
+            Aller dans le menu "Outils" du navigateur puis sélectionnez "Option" <br />
+            Cliquer sur l'onglet "vie privée", passer le paramétre "Accepter les cookies tiers" à "jamais", puis vliquer sur OK.
+          </li>
+          <li>
+            3/Si vous utilisez le navigateur Safari <br />
+            Dans le navigateur choisissez le menu "Edition" puis séléctionnez "Préférences". <br />
+            Cliquez sur "Confidentialité". <br />
+            Positionnez le réglage "Bloquerles cookies sur = Des tiers parties et des annonceurs", puis cliquez sur OK. 
+          </li>
+          <li>
+            4/Si vous utilisez le navigateur Google Chrome dans la barre d'outils du navigateur.
+          </li>
+      </ul>
 
     </div>
   );

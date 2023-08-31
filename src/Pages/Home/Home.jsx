@@ -4,24 +4,30 @@ import Truck from "../../assets/truck-fast-outline.svg";
 import Hands from "../../assets/handshake.png";
 import Timer from "../../assets/timer.png";
 import Medal from "../../assets/medal.svg";
+import Cookies from "../../composants/Cookies/cookies";
+
 import "./index.css";
 
 const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHoveredServices, setIsHoveredServices] = useState(false);
   const [isHoveredServicesCamera, setIsHoveredServicesCamera] = useState(false);
-
+  const [showCookiesPopup, setShowCookiesPopup] = useState(false);
+  
+  
   useEffect(() => {
     const checkScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-
+    
     window.addEventListener("scroll", checkScroll);
     return () => window.removeEventListener("scroll", checkScroll);
   }, []);
-
+  
   return (
     <div className="home">
+
+      <button className="btnCookies" onClick={() => setShowCookiesPopup(true)}><img className="imagCookies" src="../../../public/cookies.png"></img></button>
       <div className="card presentation">
         <h1 className="cardTitle">
           ~ sarl Cazalet ~<br />
@@ -135,6 +141,12 @@ const Home = () => {
           Cliquez pour découvrir tout nos équipements !
         </p>
       </div>
+      {showCookiesPopup && (
+        <div className="cookiesPopup">
+          <Cookies />
+          <button className="closeCookiesPopup" onClick={() => setShowCookiesPopup(false)}>X</button>
+        </div>
+      )}
     </div>
   );
 };
