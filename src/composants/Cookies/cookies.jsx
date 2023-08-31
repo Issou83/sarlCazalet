@@ -1,6 +1,6 @@
 import React from "react";
 
-const cookies = () => {
+const Cookies = () => {
   return (
     <div>
       <p>
@@ -94,4 +94,4 @@ const cookies = () => {
   );
 };
 
-export default cookies;
+export default Cookies;
