@@ -4,7 +4,7 @@ import Truck from "../../assets/truck-fast-outline.svg";
 import Hands from "../../assets/handshake.png";
 import Timer from "../../assets/timer.png";
 import Medal from "../../assets/medal.svg";
-import Cookies from "/cookies.png";
+import Cookies from "../../assets/cookies.png";
 
 import "./index.css";
 
@@ -27,7 +27,7 @@ const Home = () => {
   return (
     <div className="home">
 
-      <button className="btnCookies" onClick={() => setShowCookiesPopup(true)}><img className="imagCookies" src="../../../public/cookies.png"></img></button>
+      <button className="btnCookies" onClick={() => setShowCookiesPopup(true)}><img className="imagCookies" src={Cookies}></img></button>
       <div className="card presentation">
         <h1 className="cardTitle">
           ~ sarl Cazalet ~<br />

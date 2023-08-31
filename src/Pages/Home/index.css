@@ -334,7 +334,7 @@ h2 {
 /* Styles for the cookies policy button */
 .btnCookies {
   position: fixed;
-  /* background: url(../../../public/cookies.png); */
+  /* background: url(../../assets/cookies.png); */
   bottom: 0%;
   left: 1%;
   margin: 20px 0;
