@@ -4,7 +4,7 @@ import Truck from "../../assets/truck-fast-outline.svg";
 import Hands from "../../assets/handshake.png";
 import Timer from "../../assets/timer.png";
 import Medal from "../../assets/medal.svg";
-import Cookies from "../../composants/Cookies/cookies";
+import Cookies from "/cookies.png";
 
 import "./index.css";
 
