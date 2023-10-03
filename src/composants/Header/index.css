@@ -1,3 +1,5 @@
+
+
 .top {
   display: flex;
   justify-content: center;
@@ -69,9 +71,9 @@
 .navigation {
   content: "";
   position: absolute;
-
+  
   /* flex-direction: column; */
-
+  
   padding: 0px 1%;
   max-width: 100%;
   display: flex;
@@ -149,9 +151,14 @@ padding: 5px 5px 0px 5px;
 
 .camion22 {
   display: none;
-position: absolute;
-width: 6.5%;
-top: 5.5%;
-right: 0px;
-top: -5px;
+  position: absolute;
+  width: 6.5%;
+  top: 5.5%;
+  right: 0px;
+  top: -5px;
+}
+
+.urlActive {
+  color: rgb(255, 0, 0);
+  background-color: rgb(17, 0, 255);
 }

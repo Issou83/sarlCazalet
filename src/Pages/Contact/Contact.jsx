@@ -12,7 +12,7 @@ const Contact = () => {
     <div>
       <div className="laPourVous">
         <h1>
-          Implantée à Sévignacq-Meyracq, près d’Arudy et d’Oloron-Sainte-Marie
+          Implantée à ARUDY, entre PAU et OLORON-SAINTE-MARIE
           dans les Pyrénées-Atlantiques, notre entreprise SARL Cazalet
           intervient en urgence même les week-ends et les jours fériés pour vos
           travaux de vidange et de désherbage, dans un rayon de 50 km autour de

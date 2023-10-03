@@ -50,7 +50,7 @@ const Home = () => {
               <div className="sep">
                 <img className="secCardIcon timer" src={Timer} alt="" />
               </div>
-              <h2>Intervention rapide dans 48h maximum</h2>
+              <h2>Intervention rapide dans les 48h maximum</h2>
             </div>
             <div className={`setCardDetails ${isScrolled ? "apparition" : ""}`}>
               <div className="sep">
@@ -87,7 +87,7 @@ const Home = () => {
             isHoveredServices ? "display" : "hidden"
           }`}
         >
-          Implantée à Sévignacq-Meyracq, SARL Cazalet met à votre service une
+          Implantée à ARUDY, SARL Cazalet met à votre service une
           équipe de professionnels qualifiés, pour la réalisation de vos travaux
           de vidange de fosses septiques, bacs à graisses, postes de relevages,
           ainsi que de tous vos systèmes d’assainissement.
