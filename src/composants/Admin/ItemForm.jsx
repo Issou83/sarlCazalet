@@ -17,7 +17,7 @@ function ItemForm({ onItemAdded }) {
 
         const token = localStorage.getItem("token");
 
-        const response = await fetch('https://api-cazalet.vercel.app/items', {
+        const response = await fetch('http://api-cazalet.vercel.app/items', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json'
