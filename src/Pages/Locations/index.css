@@ -1,7 +1,28 @@
-.servicePage {
-    height: 51px;
-    padding: 300px;
+.lcoationsMain {
+padding: 150px;
 }
 .titreEnAttente {
     text-align: center;
+}
+
+.blockCard {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.locationsCard {
+    top: 0;
+    width: 30%;
+    box-shadow: 3px 3px 3px grey;
+    transition: 0.5s;
+}
+
+.locationsCard:hover {
+    top: 10px;
+}
+
+
+.locationsCard img {
+    width: 100%;
 }

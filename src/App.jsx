@@ -7,6 +7,7 @@ import Services from "./Pages/Services/Services";
 import Locations from "./Pages/Locations/Locations";
 import Footer from "./composants/Footer/Footer.jsx";
 import Contact from './Pages/Contact/Contact';
+import Admin from './Pages/Admin/Admin.jsx';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/locations" element={<Locations />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
       <Footer />
     </Router>
