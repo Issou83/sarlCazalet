@@ -6,7 +6,7 @@ const Locations = () => {
   const [items, setItems] = useState([]);
 
   const fetchItems = () => {
-    fetch('http://api-cazalet.vercel.app/items')
+    fetch('https://api-cazalet.vercel.app/items')
       .then(response => response.json())
       .then(data => setItems(data))
       .catch(error => console.error('Error fetching items:', error));
