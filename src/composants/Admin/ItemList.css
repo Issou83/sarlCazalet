@@ -1,0 +1,36 @@
+.nobackground {
+    background-image: none;
+}
+.nobackground h3 {
+text-align: center;}
+
+.blockListLocations {
+    display: flex;
+}
+
+.parents {
+    position: relative;
+    height: auto;
+    padding: 5px;
+}
+
+.bouttonEditer {
+    position: absolute;  
+    bottom: 5px;
+    background: orange;
+    border-radius: 0 0 0 10px;
+}
+
+.bouttonSupprimé {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: rgb(255, 0, 0);
+    color: white;
+    border-radius: 0 0 10px 0;
+}
+
+.bouttonUpdate {
+    background: green;
+    color: white;
+}

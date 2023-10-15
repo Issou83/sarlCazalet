@@ -1,8 +1,21 @@
-.lcoationsMain {
-padding: 150px;
+.locationsMain {
+    background-image: url("https://lh3.googleusercontent.com/pw/ADCreHeFzzbvDjWpn_DBIIyNoD5J8iSW6M3xmvjXArLkUfoi2yYUeB2OclzuGi-ry8Y9iv55_JnCg7VXix7trHW-8ZMHjavgqMlZVJ-Eu4zi7NBwk-XV2b_5_RzIbgOl60Tg-Mp2EVnkbN1EtOwqVin_Ss64WY7wu08RiIVBE1LOHQperXiXqn2-IfbbG5gq0RTOnPQ7VEJSq0M_pFcVsTPFNfIjSwlyOsh9JfZHQArIpy6FPhM_G93BfSHuhD65f5K-X3ES5sfi-DgREVldmxD2CoVfUJHC8DUtKja00R2BXESLOn3O2NrHnqImgquxxbZADAl0jwo5N3-TeqAvv65LVxdYWqAnb74ywyxUPY03gVpVPDXlcYXN3PJALppFUeu-n712gFN_jwPRbrds5K5GZFfjpNyLmXbk_0FoizrhYQyEO4kWLI6DWFwegVNOUZbKjaf9zkD-3O7sTWeLfCIm0hWa5nkJmQxRxz6L3ocr2WziYOkv_OdRtBs-3yNO6TbXWdR_CmDmz1Y4y3UOFsU9Oj1CKOYB2XHwcrNXs6ikJuenjAzm3UZTuHzDdgPKJe4gsMVgxpOBBA8gKbNAGbr4QEsoLBIeI7mMLRl2vLvXI59pyykx9Q1TgXrQuVFbqOR35QVYdJ82AyaFXOpGSCb7iZ4bnaR-xP-g9RIgoKoiYPsN_oTT-AzyVaA-n-cB4kiEc88Mgr2N1yq0CF4P8Ash0jbrhMn-wgt52oAruvxL_Q6sRfJjdW5w-Ve1BQj3X4Wl4GCeZtcreyApnuM86vQsnIZ2ncxjsM8JZU1V69N8M5rzU4PFzs792YMMpx_Ij7DwayXGKOThiQ6faHwY1TrfoGKr6lbYi8-0qB1rccWCBkxcWMSxnYNRpII2MHPBd3hx3nOFEv6gFP7XCMevfScvS9b6M91gpfabfgVWtX4gQYNcKUBBRQ-mFjllyiulrJ_YdTexKE_ibwh_SiDbAhz3hPRd_Uz0KbUXfLiQSxzhXq_0aV18yCR8xSbKkLuggNZe3r8=w1597-h433-s-no?authuser=3");
+    background-repeat: no-repeat;
+    background-size: 175%;
+    background-position: center ;
+    background-attachment: fixed;
+    padding: 100px 5%;
 }
-.titreEnAttente {
+
+.titreLocation {
     text-align: center;
+    color: rgb(13, 55, 169);
+}
+
+.sousTitreLocation {
+    text-align: center;
+    color:  rgb(13, 55, 169);
+    font-weight: 900;
 }
 
 .blockCard {
@@ -12,17 +25,35 @@ padding: 150px;
 }
 
 .locationsCard {
-    top: 0;
-    width: 30%;
-    box-shadow: 3px 3px 3px grey;
-    transition: 0.5s;
+    background-color: white;
+    margin: 15px;
+    width: 350px;
+    height: 330px;
+    box-shadow: 3px 3px 10px grey;
+    border-radius: 15px;
+    transition: 0.2s;
+    text-overflow: ellipsis;
 }
 
 .locationsCard:hover {
-    top: 10px;
+    box-shadow: 0px 0px 0px grey;
+    scale: 0.99;
+    
 }
 
 
 .locationsCard img {
     width: 100%;
+    height: 60%;
+    border-radius: 10px 10px 0 0 ;
+}
+
+.locationsCard h3 {
+    margin: 0;
+}
+
+.locationsCard p {
+    word-wrap: break-word;   
+    overflow: hidden;  
+    margin: 5px 0 0;
 }

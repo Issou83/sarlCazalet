@@ -41,7 +41,7 @@ function ItemForm({ onItemAdded }) {
     };
 
     return (
-        <div>
+        <div className='sectionAjout'>
             <h3>Ajout d'une nouvelle location</h3>
         <div className='locationForm'>
             <form onSubmit={handleSubmit}>
@@ -63,7 +63,7 @@ function ItemForm({ onItemAdded }) {
                     ></textarea>
                 </div>
                 <div>
-                    <label>Image URL: </label>
+                    <label>URL de l'image</label>
                     <input 
                         type="text"
                         value={imageUrl}
@@ -72,7 +72,7 @@ function ItemForm({ onItemAdded }) {
                     />
                 </div>
                 <div>
-                    <button type="submit">Add</button>
+                    <button type="submit">Ajouter</button>
                 </div>
             </form>
         </div>

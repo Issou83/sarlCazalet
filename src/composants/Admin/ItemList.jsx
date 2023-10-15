@@ -1,5 +1,5 @@
-
 import React, { useEffect, useState } from 'react';
+import  "./ItemList.css"
 
 const ItemList = () => {
   const [items, setItems] = useState([]);
@@ -12,21 +12,45 @@ const ItemList = () => {
   }, []);
 
   const fetchItems = () => {
-    fetch('https://api-cazalet.vercel.app/items')
+    fetch('http:////api-cazalet.vercel.app/items')
       .then(response => response.json())
       .then(data => setItems(data))
       .catch(error => console.error('Error fetching items:', error));
   };
 
-  const handleEdit = (item) => {
+  
+const handleUpdate = async () => {
+    const token = localStorage.getItem("token");
+
+    const response = await fetch(`http://api-cazalet.vercel.app/items/${currentItem._id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify(editedItem)
+    });
+
+    const data = await response.json();
+
+    if (data) {
+        setIsEditing(false);
+        // Refresh the items list to reflect the updated item
+        fetchItems();
+    }
+};
+
+
+const handleEdit = (item) => {
     setIsEditing(true);
     setCurrentItem(item);
-  };
+    setEditedItem(item);  // Add this line to also update editedItem
+};
 
   const handleDelete = (id) => {
     
     const token = localStorage.getItem('token');
-    fetch(`http://api-cazalet.vercel.app/${id}`, {
+    fetch(`http://api-cazalet.vercel.app/items/${id}`, {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${token}`
@@ -50,26 +74,32 @@ const handleEditSubmit = (e) => {
 
 if (isEditing && currentItem) {
   return (
+    <div className='locationForm'>
+      <p></p>
     <form onSubmit={handleEditSubmit}>
       <input value={editedItem.title} onChange={e => setEditedItem({ ...editedItem, title: e.target.value })} placeholder="Title" />
       <input value={editedItem.description} onChange={e => setEditedItem({ ...editedItem, description: e.target.value })} placeholder="Description" />
       <input value={editedItem.imageUrl} onChange={e => setEditedItem({ ...editedItem, imageUrl: e.target.value })} placeholder="Image URL" />
-      <button type="submit">Update</button>
+      <button className='bouttonUpdate' onClick={handleUpdate}>Update</button>
     </form>
+    </div>
   );
 }
 
 return (
-    <div>
+    <div className='locationsMain nobackground'>
+      <h3>Matériels à louer</h3>
+      <div className='blockListLocations'>
       {items.map(item => (
-        <div key={item._id} style={{ border: '1px solid #ccc', margin: '8px', padding: '8px' }}>
-          <img src={item.imageUrl} alt={item.title} style={{ maxWidth: '200px' }} />
+        <div className='locationsCard parents' key={item._id} >
+          <img src={item.imageUrl} alt={item.title} />
           <h3>{item.title}</h3>
           <p>{item.description}</p>
-          <button onClick={() => handleEdit(item)}>Edit</button>
-          <button onClick={() => handleDelete(item._id)}>Delete</button>
+          <button className='bouttonEditer' onClick={() => handleEdit(item)}>Editer</button> 
+          <button className='bouttonSupprimé' onClick={() => handleDelete(item._id)}>Supprimé</button>
         </div>
       ))}
+      </div>
     </div>
   );
 };

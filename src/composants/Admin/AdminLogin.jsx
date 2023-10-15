@@ -7,7 +7,7 @@ function AdminLogin({ onAuthenticationSuccess }) {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const response = await fetch("http://localhost:3001/auth", {
+        const response = await fetch("http://api-cazalet.vercel.app/auth", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',

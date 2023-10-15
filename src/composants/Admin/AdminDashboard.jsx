@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ItemForm from './ItemForm';
 import ItemList from './ItemList';
+import "./AdminDashboard.css";
 
 function AdminDashboard() {
     const [items, setItems] = useState([]);
@@ -10,7 +11,7 @@ function AdminDashboard() {
     }, []);
 
     const fetchItems = async () => {
-        const response = await fetch('http://localhost:3001/items');
+        const response = await fetch('http://api-cazalet.vercel.app/items');
         const data = await response.json();
         setItems(data);
     };
@@ -22,12 +23,12 @@ function AdminDashboard() {
     return (
         <div className='adminMain'>
             <h2 className='titleItems'>Gestion des locations</h2>
-            <div>
+                <div className='blockAjout'>
                 <ItemForm onItemAdded={addItem} />
-            </div>
-            <div>
+                </div>
+      
                 <ItemList items={items} />
-            </div>
+      
         </div>
     );
 }

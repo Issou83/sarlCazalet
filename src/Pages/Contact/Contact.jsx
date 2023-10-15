@@ -1,4 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
+import L from "leaflet";
+import { MapContainer, TileLayer, Circle } from "react-leaflet";
+import iconRetinaUrl from 'leaflet/dist/images/marker-icon-2x.png';
+import iconUrl from 'leaflet/dist/images/marker-icon.png';
+import shadowUrl from 'leaflet/dist/images/marker-shadow.png';
+
 
 import "./index.css";
 import Telephone from "../../assets/tel.png";
@@ -7,6 +13,19 @@ import Mail from "../../assets/mail.png";
 import Calendar from "../../assets/calendar.png";
 
 const Contact = () => {
+  useEffect(() => {
+    // Fix for the leaflet map icons
+    delete L.Icon.Default.prototype._getIconUrl;
+    L.Icon.Default.mergeOptions({
+      iconRetinaUrl,
+      iconUrl,
+      shadowUrl,
+    });
+  }, []);
+  
+
+  const position = [43.1027198139486, -0.4270420423279545];
+
   return (
     <div>
       <div className="laPourVous">
@@ -55,6 +74,17 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <div 
+      className="sectionMap">
+      <h2>Notre rayon d'action</h2>
+      <MapContainer center={position} zoom={8} style={{ height: "300px", width: "100%" }}>
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Circle center={position} radius={50000} />
+      </MapContainer>
+    </div>
     </div>
   );
 };

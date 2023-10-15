@@ -1,0 +1,9 @@
+.titleItems {
+    text-align: center;
+    font-size: 50px;
+}
+
+.blockAjout {
+display: flex;
+justify-content: center;
+}

@@ -13,6 +13,7 @@ const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHoveredServices, setIsHoveredServices] = useState(false);
   const [isHoveredServicesCamera, setIsHoveredServicesCamera] = useState(false);
+  const [isHoveredServicesLocation, setIsHoveredServicesLocation] = useState(false);
   const [showCookiesPopup, setShowCookiesPopup] = useState(false);
   
   
@@ -96,20 +97,15 @@ const Home = () => {
       <div
         className="card servicesCamera"
         onMouseEnter={() => setIsHoveredServicesCamera(true)}
-        onMouseLeave={() => setIsHoveredServicesCamera(false)}
-      >
+        onMouseLeave={() => setIsHoveredServicesCamera(false)}>
         <h2
           className={`cardTitle ${
-            isHoveredServicesCamera ? "hidden" : "display"
-          }`}
-        >
+            isHoveredServicesCamera ? "hidden" : "display"}`}>
           Inspection par caméra de canalisation et réseau
         </h2>
         <p
           className={`descriptionsServices ${
-            isHoveredServicesCamera ? "display" : "hidden"
-          }`}
-        >
+            isHoveredServicesCamera ? "display" : "hidden"}`}>
           Nous déployons une caméra vidéo performante et un matériel de pointe
           pour effectuer l’inspection, avant d'entamer le curage et débouchage
           des canalisations obstruées.
@@ -117,21 +113,16 @@ const Home = () => {
       </div>
       <div
         className="card location"
-        onMouseEnter={() => setIsHoveredServicesCamera(true)}
-        onMouseLeave={() => setIsHoveredServicesCamera(false)}
-      >
+        onMouseEnter={() => setIsHoveredServicesLocation(true)}
+        onMouseLeave={() => setIsHoveredServicesLocation(false)}>
         <h2
           className={`cardTitle ${
-            isHoveredServicesCamera ? "hidden" : "display"
-          }`}
-        >
+            isHoveredServicesLocation ? "hidden" : "display"}`}>
           Nos équipements à louer
         </h2>
         <p
           className={`descriptionsServices ${
-            isHoveredServicesCamera ? "display" : "hidden"
-          }`}
-        >
+            isHoveredServicesLocation ? "display" : "hidden"}`}>
           Pour vos événements, chantiers, manifestations (sportives, foires,
           fêtes...) nous vous proposons un service de location de WC autonome.
           <br />
@@ -146,8 +137,7 @@ const Home = () => {
         <div className="cookiesPopup">
         <Cookies/>
           <button className="closeCookiesPopup" onClick={() => setShowCookiesPopup(false)}>X</button>
-        </div>
-      )}
+        </div>)}
     </div>
   );
 };

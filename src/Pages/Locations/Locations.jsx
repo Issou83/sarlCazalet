@@ -16,10 +16,11 @@ const Locations = () => {
   }, []);
 
   return (
-    <div className="lcoationsMain">
-      <h1 className="titreEnAttente">Nous préparons la liste de tout le materiel que vous aurez besoin.<br/>
-      Revenez vite...
+    <div className="locationsMain">
+      <h1 className="titreLocation">Nos Locations
       </h1>
+      <p className='sousTitreLocation'>(Louez nos materiels et équipements. Ils sont entretenues et toujours prés à l'emplois)</p>
+      <p></p>
       <div className='blockCard'>    
       {items.map(item => (
         <div className='locationsCard' key={item._id} style={{ border: '1px solid #ccc', margin: '8px', padding: '8px' }}>
