@@ -73,6 +73,7 @@
 
 /* Section 3: Styles de mise en page */
 .presentation {
+  position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("../../assets/JP.png") center/cover no-repeat;
   background-size: 120%;
@@ -183,13 +184,13 @@
 /* Section 5: Autres éléments et fonctionnalités spécifiques */
 .secCard {
   color: rgb(0, 0, 0);
-  padding: 0 1%;
   position: absolute;
+  content: '';
   height: 200px;
   width: 50%;
   box-shadow: 2px 5px 8px rgb(0, 0, 0);
   border-radius: 5px;
-  bottom: 10px;
+  bottom: -130px;
   background-color: rgba(255, 255, 255, 0.268);
 }
 
