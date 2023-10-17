@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./AdminLogin.css"
 
 function AdminLogin({ onAuthenticationSuccess }) {
     const [username, setUsername] = useState("");
@@ -7,7 +8,7 @@ function AdminLogin({ onAuthenticationSuccess }) {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const response = await fetch("http://api-cazalet.vercel.app/auth", {
+        const response = await fetch("https://api-cazalet.vercel.app/auth", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
@@ -29,11 +30,10 @@ function AdminLogin({ onAuthenticationSuccess }) {
     }
 
     return (
-        <div>
-            <h2>Admin Login</h2>
+        <div className='loginAdmin'>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label>Username: </label>
+                    <label>Nom: </label>
                     <input 
                         type="text" 
                         value={username} 
@@ -42,7 +42,7 @@ function AdminLogin({ onAuthenticationSuccess }) {
                     />
                 </div>
                 <div>
-                    <label>Password: </label>
+                    <label>Mot de passe: </label>
                     <input 
                         type="password" 
                         value={password} 

@@ -26,23 +26,9 @@ const Locations = () => {
   return (
     <div className="locationsMain">
       <h1 className="titreLocations">Nos locations</h1>
-      <p className='sousTitreLocation'>(Louez nos materiels et équipements. Ils sont entretenues et toujours prés à l'emplois)</p>
       {
         isLoading ? (  // 3. Conditional rendering based on loading state
-        <div className="spinner center">
-        <div className="spinner-blade"></div>
-        <div className="spinner-blade"></div>
-        <div className="spinner-blade"></div>
-        <div className="spinner-blade"></div>
-        <div className="spinner-blade"></div>
-        <div className="spinner-blade"></div>
-        <div className="spinner-blade"></div>
-        <div className="spinner-blade"></div>
-        <div className="spinner-blade"></div>
-        <div className="spinner-blade"></div>
-        <div className="spinner-blade"></div>
-        <div className="spinner-blade"></div>
-    </div>
+          <div className="loader"></div>  // Your loader here
         ) : (
             <div className='blockCard'>    
             {items.map(item => (

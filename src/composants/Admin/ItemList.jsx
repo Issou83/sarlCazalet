@@ -12,7 +12,7 @@ const ItemList = () => {
   }, []);
 
   const fetchItems = () => {
-    fetch('http:////api-cazalet.vercel.app/items')
+    fetch('https:////api-cazalet.vercel.app/items')
       .then(response => response.json())
       .then(data => setItems(data))
       .catch(error => console.error('Error fetching items:', error));
@@ -22,7 +22,7 @@ const ItemList = () => {
 const handleUpdate = async () => {
     const token = localStorage.getItem("token");
 
-    const response = await fetch(`http://api-cazalet.vercel.app/items/${currentItem._id}`, {
+    const response = await fetch(`https://api-cazalet.vercel.app/items/${currentItem._id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
@@ -50,7 +50,7 @@ const handleEdit = (item) => {
   const handleDelete = (id) => {
     
     const token = localStorage.getItem('token');
-    fetch(`http://api-cazalet.vercel.app/items/${id}`, {
+    fetch(`https://api-cazalet.vercel.app/items/${id}`, {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${token}`

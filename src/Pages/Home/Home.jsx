@@ -74,7 +74,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div
+      <NavLink to="/services"
         className="card services"
         onMouseEnter={() => setIsHoveredServices(true)}
         onMouseLeave={() => setIsHoveredServices(false)}
@@ -93,8 +93,8 @@ const Home = () => {
           de vidange de fosses septiques, bacs à graisses, postes de relevages,
           ainsi que de tous vos systèmes d’assainissement.
         </p>
-      </div>
-      <div
+      </NavLink>
+      <NavLink to="/services"
         className="card servicesCamera"
         onMouseEnter={() => setIsHoveredServicesCamera(true)}
         onMouseLeave={() => setIsHoveredServicesCamera(false)}>
@@ -110,11 +110,10 @@ const Home = () => {
           pour effectuer l’inspection, avant d'entamer le curage et débouchage
           des canalisations obstruées.
         </p>
-      </div>
-      <div
-        className="card location"
+      </NavLink>
+      <NavLink to="/contact" className="card location"
         onMouseEnter={() => setIsHoveredServicesLocation(true)}
-        onMouseLeave={() => setIsHoveredServicesLocation(false)}>
+        onMouseLeave={() => setIsHoveredServicesLocation(false)}> 
         <h2
           className={`cardTitle ${
             isHoveredServicesLocation ? "hidden" : "display"}`}>
@@ -132,7 +131,7 @@ const Home = () => {
           <br />
           Cliquez pour découvrir tout nos équipements !
         </p>
-      </div>
+      </NavLink>
       {showCookiesPopup && (
         <div className="cookiesPopup">
         <Cookies/>

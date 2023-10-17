@@ -1,6 +1,11 @@
 .mainServices {
-    min-height: 452px;
-    margin-top: 200px;
+    background: linear-gradient(rgba(0, 0, 0, 0.866), rgba(0, 0, 0, 0.3)),
+    url("../../assets/camion22.png") center no-repeat;
+    background-repeat: no-repeat;
+    background-position: -10px;
+    background-position-x: right;
+    min-height: 752px;
+    padding-top: 150px;
     text-align: center;
     
 }
@@ -11,8 +16,17 @@
     top: 300px;
     height: 300px;
 }
+.mainServices h1 {
+    color: rgb(13, 55, 169);
+  
+}
 .mainServices p {
-  font-size: 22px;
+    color: white;
+  font-size: 24px;
+}
+
+.camExlication {
+    padding-top: 50px;
 }
 
 .descriServices {

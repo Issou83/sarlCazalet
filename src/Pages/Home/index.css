@@ -59,10 +59,13 @@
 }
 
 .btnContact {
-  background: linear-gradient(0.75turn, #000000 0%, rgb(94, 94, 172) 100%);
+  margin-top: 30px;
+  padding: 5px;
+  background:  rgb(13, 55, 169);
   box-shadow: 2px 2px 5px rgb(0, 0, 0);
+  border-radius: 5px;
   color: white;
-  border: 1px solid white;
+  border: none;
 }
 
 .btnContact:hover {
@@ -114,7 +117,7 @@
     height: 110px;
   }
 
-  .presentation, .services, .servicesCamera {
+  .presentation, .services, .servicesCamera, .location {
     background-size: 150%;
   }
 
@@ -146,7 +149,7 @@
     background-position: 50% 30%;
   }
 
-  .presentation, .services, .servicesCamera {
+  .presentation, .services, .servicesCamera, .location {
     background-size: 290%;
     width: 90%;
   }
@@ -252,7 +255,6 @@ h2 {
 
 @media screen and (max-width: 992px) {
   .secCard {
-    bottom:90px;
     min-width: 306px;
     padding: 0px 0px;
   }
