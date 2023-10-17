@@ -4,10 +4,10 @@
     background-repeat: no-repeat;
     background-position: -10px;
     background-position-x: right;
-    min-height: 752px;
+    min-height: 700px;
     padding-top: 150px;
     text-align: center;
-    
+    padding: 150px 10%;
 }
 
 .mainServices img {
@@ -25,10 +25,6 @@
   font-size: 24px;
 }
 
-.camExlication {
-    padding-top: 50px;
-}
-
-.descriServices {
-    padding: 0 20%;
+.camExplication {
+    padding-top: 100px;
 }

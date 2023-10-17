@@ -5,6 +5,7 @@
     background-position: center ;
     background-attachment: fixed;
     padding: 100px 5%;
+    min-height: 700px;
 }
 
 .titreLocations {
@@ -28,7 +29,7 @@
     background-color: white;
     margin: 15px;
     width: 350px;
-    height: 330px;
+    height: 350px;
     box-shadow: 3px 3px 10px grey;
     border-radius: 15px;
     transition: 0.2s;
