@@ -27,7 +27,7 @@ const Contact = () => {
   const position = [43.1027198139486, -0.4270420423279545];
 
   return (
-    <div>
+    <div className="mainContact">
       <div className="laPourVous">
         <h1>
           Implantée à ARUDY, entre PAU et OLORON-SAINTE-MARIE

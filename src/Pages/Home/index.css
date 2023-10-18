@@ -140,7 +140,7 @@
     font-size: 30px;
   }
   .card p {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 720px) {
@@ -161,7 +161,7 @@
 
   .servicesCamera {
     background-position: 30% 50%;
-    margin-top: 80px;
+  
     padding: 80px 0;
 
   }
@@ -180,7 +180,7 @@
     font-size: 20px;
   }
   .card p {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
