@@ -41,9 +41,6 @@
 }
 
 .row {
-  /* position: fixed;
-  content: "";
-  position: relative; */
   right: 1%;
   display: flex;
   flex-direction: row;
@@ -54,6 +51,20 @@
   transition: 1s;
   z-index: 2;
 }
+ 
+@media screen and (max-width: 768px) {
+  .row {
+    align-items: flex-end;
+  }
+  .small {
+   height: 100px;
+    transition: 1s;
+  }
+  .column {
+    flex-direction: row;
+
+  }
+}
 
 .title { 
   font-size:26px;
@@ -61,6 +72,15 @@
   position: absolute;
   left: 12%;
   color: #f8f8f8;
+}
+
+@media screen and (max-width: 450px) {
+  .title {
+font-size: 20px;
+left: 2%;
+top: 0;
+  }
+
 }
 
 .logoCam {
@@ -94,6 +114,14 @@
   background: linear-gradient(0.75turn, #181927 0%, rgb(13, 55, 169) 100%);
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 768px) {
+  .btnNav {
+    font-size: 13px;
+    width: 32px;
+    height: 36px;
+  }
 }
 
 .btnNav:active {

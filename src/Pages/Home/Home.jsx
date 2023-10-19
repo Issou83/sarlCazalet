@@ -111,7 +111,7 @@ const Home = () => {
           des canalisations obstruées.
         </p>
       </NavLink>
-      <NavLink to="/contact" className="card location"
+      <NavLink to="/locations" className="card location"
         onMouseEnter={() => setIsHoveredServicesLocation(true)}
         onMouseLeave={() => setIsHoveredServicesLocation(false)}> 
         <h2

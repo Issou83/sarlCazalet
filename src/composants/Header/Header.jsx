@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <div className="top">
-      <div className={`header ${isScrolled ? "small" : ""}`}>
+      <div className={`header ${isScrolled ? "small" : "height"}`}>
         <img className="logoCam" src={logoCam} alt="logo"></img>
         <h2 className="title">sarl CAZALET</h2>
         <div className={`navigation ${isScrolled ? "row" : "column"}`}>
