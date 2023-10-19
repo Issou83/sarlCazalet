@@ -62,9 +62,9 @@ const Header = () => {
         </div>
         <img className="camion22" src={camion22} alt=""></img>
         <div className="tel">
-          <NavLink href="tel:0559308134" className="btnTel">
+        <a href="tel:0559308134" className="btnTel">
             05 59 30 81 34
-          </NavLink>
+        </a>
         </div>
       </div>
     </div>
