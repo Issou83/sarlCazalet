@@ -6,6 +6,7 @@ import Timer from "../../assets/timer.png";
 import Medal from "../../assets/medal.svg";
 import cookies from "../../assets/cookies.png";
 import Cookies from "../../composants/Cookies/cookies";
+import NouveauLocations from "../../composants/NouveauLocations/NouveauLocations"
 
 import "./index.css";
 
@@ -137,6 +138,7 @@ const Home = () => {
         <Cookies/>
           <button className="closeCookiesPopup" onClick={() => setShowCookiesPopup(false)}>X</button>
         </div>)}
+        <NouveauLocations/>
     </div>
   );
 };
