@@ -4,7 +4,7 @@ import './index.css';
 const NouveauLocations = () => {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [showPromotion, setShowPromotion] = useState(false);
+  const [showPromotion, setShowPromotion] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const fetchItems = () => {
@@ -33,7 +33,7 @@ const NouveauLocations = () => {
         }
         return newIndex;
       });
-    }, 3000);
+    }, 4000);
     return () => clearInterval(interval);
   }, [items]);
 
@@ -43,7 +43,8 @@ const NouveauLocations = () => {
         <h3>NOUVEAU !</h3>
       </button>
       <div className={`itemsPromotion ${showPromotion ? 'show' : 'hide'}`}>
-        <h3>Louez tout, <br />tout de suite</h3>
+        <button  onClick={() => setShowPromotion(!showPromotion)}>X</button>
+        <h3>NOS LOCATIONS <br /> DISPONBLES :</h3>
         {isLoading ? (
                   <div className="spinner center">
                   <div className="spinner-blade"></div>

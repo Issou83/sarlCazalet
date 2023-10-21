@@ -9,7 +9,7 @@
     position: fixed;
     background: red;
     color: rgb(0, 55, 255);
-top: 126px;
+bottom: 344px;
 left: 0;
 border: none;
 padding: 4px;
@@ -17,10 +17,14 @@ padding-bottom: 2px;
 margin: 0;
 border-radius: 0 9px 9px 0;
 box-shadow: 0 0 50px rgb(0, 47, 255);
+z-index: 999999;
+border: 2px solid blue;
+border-left: none;
 }
 
 
 .btnNews h3 {
+  font-size: 12px;
     margin: 0;
 }
 
@@ -30,17 +34,36 @@ box-shadow: 0 0 50px rgb(0, 47, 255);
 
 .itemsPromotion {
     position: fixed;
-    top: 140px;
+    bottom: 90px;
     left: 0;
-    height: auto;
-    width: auto;
+    height: 243px;
+    width: 150px;
     overflow-y: auto;
     transition: left 0.5s ease-in-out;
-    background-color: #ffffffdd;
+    background-color: #ffffff63;
     z-index: 9999;
-   
-    margin: 10px 10px 10px 0px;
+    border-radius: 0px 15px 15px 0px;
+   border-top: 2px solid rgb(0, 0, 255);
+   border-right: 2px solid blue;
+   border-bottom: 2px solid blue;
+    margin: 0px 10px 10px 0px;
     padding: 5px;
+  }
+
+  .itemsPromotion h3 {
+    text-align: center;
+  }
+  .itemsPromotion button {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 700;
+    color: red;
+    border: none;
+
   }
   
   .slotMachine {
@@ -53,10 +76,10 @@ box-shadow: 0 0 50px rgb(0, 47, 255);
   /* Styling for the individual cards in the itemsPromotion div */
   .locationsCard1 {
     background-color: white;
-  
+  opacity: 1;
     width: 150px;
     height: 150px;
- 
+ border-radius: 0 0 9px 0;
     transition: 0.2s;
     text-overflow: ellipsis;
 }
@@ -96,22 +119,22 @@ box-shadow: 0 0 50px rgb(0, 47, 255);
 .hide {
   transform: translateX(-100%);
   opacity: 0;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transition: transform 2s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 /* Fade-in animation for items */
 .fade-in {
-  animation: fadeIn ease 2s;
-  -webkit-animation: fadeIn ease 2s;
-  -moz-animation: fadeIn ease 2s;
-  -o-animation: fadeIn ease 2s;
-  -ms-animation: fadeIn ease 2s;
+  animation: fadeIn ease-in-out 1s;
+  -webkit-animation: fadeIn ease-in-out 1s;
+  -moz-animation: fadeIn ease-in-out 1s;
+  -o-animation: fadeIn ease-in-out 1s;
+  -ms-animation: fadeIn ease-in-out 1s;
 }
 
 @keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {transform: translateX(-100%);
+  opacity: 0;}
+
+50% {transform: translateX(0%)}
+  100% {opacity: 1;}
 }
-
-/* Add more CSS if needed */
-
