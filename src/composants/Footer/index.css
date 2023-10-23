@@ -14,8 +14,17 @@
   align-items: center;
 }
 
+.linkeIN {
+  display: flex;
+  flex-direction: column;
+}
+
 
 .carteVisite {
     height: 100%;
     max-width: 100%;
+}
+
+.linkFooter {
+  color: white;
 }

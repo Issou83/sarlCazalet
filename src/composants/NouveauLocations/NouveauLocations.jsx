@@ -33,7 +33,7 @@ const NouveauLocations = () => {
         }
         return newIndex;
       });
-    }, 4000);
+    }, 3000);
     return () => clearInterval(interval);
   }, [items]);
 
@@ -44,7 +44,7 @@ const NouveauLocations = () => {
       </button>
       <div className={`itemsPromotion ${showPromotion ? 'show' : 'hide'}`}>
         <button  onClick={() => setShowPromotion(!showPromotion)}>X</button>
-        <h3>NOS LOCATIONS <br /> DISPONBLES :</h3>
+        <h3>NOS LOCATIONS <br /> DISPONIBLES :</h3>
         {isLoading ? (
                   <div className="spinner center">
                   <div className="spinner-blade"></div>

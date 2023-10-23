@@ -20,7 +20,7 @@ const Home = () => {
   
   useEffect(() => {
     const checkScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 1);
     };
     
     window.addEventListener("scroll", checkScroll);
@@ -30,7 +30,7 @@ const Home = () => {
   return (
     <div className="home">
 
-      <button className="btnCookies" onClick={() => setShowCookiesPopup(true)}><img className="imagCookies" src={cookies}></img></button>
+      <button className="btnCookies" onClick={() => setShowCookiesPopup(true)}><img alt="Un cookies" className="imagCookies" src={cookies}></img></button>
       <div className="card presentation">
         <h1 className="cardTitle">
           ~ sarl Cazalet ~<br />
@@ -50,25 +50,25 @@ const Home = () => {
           <div className="secCardCheck">
             <div className={`setCardDetails ${isScrolled ? "apparition" : ""}`}>
               <div className="sep">
-                <img className="secCardIcon timer" src={Timer} alt="" />
+                <img className="secCardIcon timer" src={Timer} alt="Chronométre" />
               </div>
               <h2>Intervention rapide dans les 48h maximum</h2>
             </div>
             <div className={`setCardDetails ${isScrolled ? "apparition" : ""}`}>
               <div className="sep">
-                <img className="secCardIcon" src={Hands} alt="" />
+                <img className="secCardIcon" src={Hands} alt="Se serrer la main" />
               </div>
               <h2>Disponibilité, réactivité et conseils</h2>
             </div>
             <div className={`setCardDetails ${isScrolled ? "apparition" : ""}`}>
               <div className="sep">
-                <img className="secCardIcon" src={Truck} alt="" />
+                <img className="secCardIcon" src={Truck} alt="Camion roulant" />
               </div>
               <h2>Permanence les jours fériés et week-ends</h2>
             </div>
             <div className={`setCardDetails ${isScrolled ? "apparition" : ""}`}>
               <div className="sep">
-                <img className="secCardIcon" src={Medal} alt="" />
+                <img className="secCardIcon" src={Medal} alt="Médaille" />
               </div>
               <h2>Entreprise agréée par la préfecture (64)</h2>
             </div>

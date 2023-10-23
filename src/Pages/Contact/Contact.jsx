@@ -45,20 +45,20 @@ const Contact = () => {
             <a href="tel:0559308134">
                 <div className="caseContact">
                   <h3>Téléphone</h3>
-                  <img src={Telephone} alt="" className="tel1" />
+                  <img src={Telephone} alt="Téléphone" className="tel1" />
                   05 59 30 81 34
                 </div>
               </a>
               <a href="tel:0615285911">
                 <div className="caseContact">
                 <h3>Mobile</h3>
-                  <img src={Smartphone} alt="" className="smartphone"/>06 15 28 59 11
+                  <img src={Smartphone} alt="Smartphone" className="smartphone"/>06 15 28 59 11
                 </div>
               </a>
               <a href="mailto:jean-pierre.cazalet@wanadoo.fr">
                 <div className="caseContact">
                 <h3>E-MAIL</h3>
-                <img src={Mail} alt="" className="mail" />jean-pierre.cazalet@wanadoo.fr
+                <img src={Mail} alt="Mail" className="mail" />jean-pierre.cazalet@wanadoo.fr
                 </div>
               </a>
             </div>
@@ -66,7 +66,7 @@ const Contact = () => {
           <div className="horaires">
             <h2>Nos horaires</h2>
             <div className="joursHeures">
-              <img src={Calendar} alt="" className="calendar" />
+              <img src={Calendar} alt="Calendrier" className="calendar" />
               <p>
                 7/7 <br /> 07:00 à 20h00
               </p>
@@ -80,14 +80,11 @@ const Contact = () => {
       <MapContainer center={position} zoom={8} style={{ height: "300px", width: "100%" }}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
         <Circle center={position} radius={50000} />
         <Marker position={position}>
-           
-          </Marker>
+        </Marker>
         </MapContainer>
-   
     </div>
     </div>
   );
