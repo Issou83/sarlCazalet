@@ -6,7 +6,7 @@ import Timer from "../../assets/timer.png";
 import Medal from "../../assets/medal.svg";
 import cookies from "../../assets/cookies.png";
 import Cookies from "../../composants/Cookies/cookies";
-import NouveauLocations from "../../composants/NouveauLocations/NouveauLocations"
+import NouveauLocations from "../../composants/NouveauLocations/NouveauLocations";
 
 import "./index.css";
 
@@ -14,23 +14,24 @@ const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHoveredServices, setIsHoveredServices] = useState(false);
   const [isHoveredServicesCamera, setIsHoveredServicesCamera] = useState(false);
-  const [isHoveredServicesLocation, setIsHoveredServicesLocation] = useState(false);
+  const [isHoveredServicesLocation, setIsHoveredServicesLocation] =
+    useState(false);
   const [showCookiesPopup, setShowCookiesPopup] = useState(false);
-  
-  
+
   useEffect(() => {
     const checkScroll = () => {
       setIsScrolled(window.scrollY > 1);
     };
-    
+
     window.addEventListener("scroll", checkScroll);
     return () => window.removeEventListener("scroll", checkScroll);
   }, []);
-  
+
   return (
     <div className="home">
-
-      <button className="btnCookies" onClick={() => setShowCookiesPopup(true)}><img alt="Un cookies" className="imagCookies" src={cookies}></img></button>
+      <button className="btnCookies" onClick={() => setShowCookiesPopup(true)}>
+        <img alt="Un cookies" className="imagCookies" src={cookies}></img>
+      </button>
       <div className="card presentation">
         <h1 className="cardTitle">
           ~ sarl Cazalet ~<br />
@@ -50,13 +51,21 @@ const Home = () => {
           <div className="secCardCheck">
             <div className={`setCardDetails ${isScrolled ? "apparition" : ""}`}>
               <div className="sep">
-                <img className="secCardIcon timer" src={Timer} alt="Chronométre" />
+                <img
+                  className="secCardIcon timer"
+                  src={Timer}
+                  alt="Chronométre"
+                />
               </div>
               <h2>Intervention rapide dans les 48h maximum</h2>
             </div>
             <div className={`setCardDetails ${isScrolled ? "apparition" : ""}`}>
               <div className="sep">
-                <img className="secCardIcon" src={Hands} alt="Se serrer la main" />
+                <img
+                  className="secCardIcon"
+                  src={Hands}
+                  alt="Se serrer la main"
+                />
               </div>
               <h2>Disponibilité, réactivité et conseils</h2>
             </div>
@@ -75,7 +84,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <NavLink to="/services"
+      <NavLink
+        to="/services"
         className="card services"
         onMouseEnter={() => setIsHoveredServices(true)}
         onMouseLeave={() => setIsHoveredServices(false)}
@@ -89,40 +99,53 @@ const Home = () => {
             isHoveredServices ? "display" : "hidden"
           }`}
         >
-          Implantée à ARUDY, SARL Cazalet met à votre service une
-          équipe de professionnels qualifiés, pour la réalisation de vos travaux
-          de vidange de fosses septiques, bacs à graisses, postes de relevages,
+          Implantée à ARUDY, SARL Cazalet met à votre service une équipe de
+          professionnels qualifiés, pour la réalisation de vos travaux de
+          vidange de fosses septiques, bacs à graisses, postes de relevages,
           ainsi que de tous vos systèmes d’assainissement.
         </p>
       </NavLink>
-      <NavLink to="/services"
+      <NavLink
+        to="/services"
         className="card servicesCamera"
         onMouseEnter={() => setIsHoveredServicesCamera(true)}
-        onMouseLeave={() => setIsHoveredServicesCamera(false)}>
+        onMouseLeave={() => setIsHoveredServicesCamera(false)}
+      >
         <h2
           className={`cardTitle ${
-            isHoveredServicesCamera ? "hidden" : "display"}`}>
+            isHoveredServicesCamera ? "hidden" : "display"
+          }`}
+        >
           Inspection par caméra de canalisation et réseau
         </h2>
         <p
           className={`descriptionsServices ${
-            isHoveredServicesCamera ? "display" : "hidden"}`}>
+            isHoveredServicesCamera ? "display" : "hidden"
+          }`}
+        >
           Nous déployons une caméra vidéo performante et un matériel de pointe
           pour effectuer l’inspection, avant d'entamer le curage et débouchage
           des canalisations obstruées.
         </p>
       </NavLink>
-      <NavLink to="/locations" className="card location"
+      <NavLink
+        to="/locations"
+        className="card location"
         onMouseEnter={() => setIsHoveredServicesLocation(true)}
-        onMouseLeave={() => setIsHoveredServicesLocation(false)}> 
+        onMouseLeave={() => setIsHoveredServicesLocation(false)}
+      >
         <h2
           className={`cardTitle ${
-            isHoveredServicesLocation ? "hidden" : "display"}`}>
+            isHoveredServicesLocation ? "hidden" : "display"
+          }`}
+        >
           Nos équipements à louer
         </h2>
         <p
           className={`descriptionsServices ${
-            isHoveredServicesLocation ? "display" : "hidden"}`}>
+            isHoveredServicesLocation ? "display" : "hidden"
+          }`}
+        >
           Pour vos événements, chantiers, manifestations (sportives, foires,
           fêtes...) nous vous proposons un service de location de WC autonome.
           <br />
@@ -135,10 +158,16 @@ const Home = () => {
       </NavLink>
       {showCookiesPopup && (
         <div className="cookiesPopup">
-        <Cookies/>
-          <button className="closeCookiesPopup" onClick={() => setShowCookiesPopup(false)}>X</button>
-        </div>)}
-        <NouveauLocations/>
+          <Cookies />
+          <button
+            className="closeCookiesPopup"
+            onClick={() => setShowCookiesPopup(false)}
+          >
+            X
+          </button>
+        </div>
+      )}
+      <NouveauLocations />
     </div>
   );
 };
