@@ -6,8 +6,8 @@ import Home from "./Pages/Home/Home";
 import Services from "./Pages/Services/Services";
 import Locations from "./Pages/Locations/Locations";
 import Footer from "./composants/Footer/Footer.jsx";
-import Contact from './Pages/Contact/Contact';
-import Admin from './Pages/Admin/Admin.jsx';
+import Contact from "./Pages/Contact/Contact";
+import Admin from "./Pages/Admin/Admin.jsx";
 
 function App() {
   return (
