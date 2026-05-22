@@ -1,152 +1,139 @@
-.laPourVous {
-    height: 650px;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../assets/camion11.webp) center/cover no-repeat;
-    background-position:  0px -80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 400px;
-    text-align: center;
-    color: white;
-} 
-
-@media screen and (max-width: 882px) {
-    .laPourVous {
-        margin-bottom: 500px;
-    }
+.contactPage {
+  min-height: 100vh;
+  background: #f5f7fb;
 }
 
-@media screen and (max-width: 594px) {
-    .laPourVous {
-        margin-bottom: 600px;
-    }
-
-    .laPourVous h1 {
-        font-size: 90px;
-
-    }
+.contactHero {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  padding: 140px 7vw 86px;
+  color: #ffffff;
+  background:
+    linear-gradient(90deg, rgba(5, 15, 31, 0.9) 0%, rgba(5, 15, 31, 0.66) 50%, rgba(5, 15, 31, 0.22) 100%),
+    url("../../assets/camion11.webp") center / cover no-repeat;
 }
 
-.laPourVous h1 {
-    font-size: 20px;
-padding: 10% ;
-    
+.contactHero > div {
+  max-width: 830px;
 }
 
-.mobileFixe, .joursHeures {
-    border-top: 3px solid  rgb(13, 55, 169);
-    border-bottom: 3px solid  rgb(13, 55, 169);
-    margin-bottom: 50px;
+.contactHero__eyebrow {
+  margin: 0 0 14px;
+  color: #f2c14e;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.joursHeures p{
-    margin: 0;
+.contactHero h1 {
+  margin: 0;
+  font-size: clamp(2.55rem, 5vw, 5.2rem);
+  line-height: 1;
 }
 
-.laPourVous h2, .sectionMap h2 {
-    text-align: center;
-font-size: 25px;
-margin-bottom: 10px;
-color:  rgb(13, 55, 169);
-}
-.laPourVous h3 {
-margin: 0;}
-
-.cardContact {
-    flex-wrap: wrap;
-    color: black;
-    position: absolute;
-    text-align: center;
-    width: 70%;
-    padding: 30px;
-    top: 500px;
-    background-color: white;
-    box-shadow: 0px 10px 10px black;
-    border-radius: 15px;
-    transition: 0.2s;
+.contactHero p {
+  max-width: 700px;
+  margin: 22px 0 0;
+  color: #edf3ff;
+  font-family: "Lora", serif;
+  font-size: 1.18rem;
+  line-height: 1.7;
 }
 
-.cardContact:hover {
-    box-shadow: 0px 0px 0px grey;
-    scale: 0.99;
+.contactPanel {
+  max-width: 1180px;
+  margin: -58px auto 0;
+  padding: 0 24px 96px;
+  position: relative;
 }
 
-.mobileFixe {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.contactCards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 20px 48px rgba(7, 19, 34, 0.13);
 }
 
-.caseContact {
-    /* border: 1px solid rgb(0, 21, 177); */
-    margin: 5px;
-    border-radius: 10px;
-    padding: 3px;
-    display: flex;
-    flex-direction: column;
-align-items: center;  
-/* width: 33.33%; */
-min-width: 186px;
-box-shadow: 0 0 3px rgb(0, 21, 177);
-transition: 0.3s;
-
+.contactCard {
+  min-height: 188px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 26px 22px;
+  color: #122033;
+  background: #ffffff;
+  overflow-wrap: anywhere;
 }
 
-.caseContact:hover {
-    box-shadow: 0px 0px 20px rgb(0, 21, 177);
-    transition: 0.3;
-
+.contactCard:hover {
+  background: #f9fbff;
 }
 
-.tel1 {
-height: 24px;
-width: 20px;
-margin: 5px;
+.contactCard img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
 }
 
-.smartphone {
-    width: 35px;
-
+.contactCard span {
+  color: #0d37a9;
+  font-weight: 800;
 }
 
-.mail {
-    width: 30px;
-    height: 20px;
-    margin: 8px;
+.contactCard strong {
+  font-size: 1.12rem;
+  line-height: 1.35;
 }
 
-.calendar {
-    margin-top: 10px;
-    width: 20px;
+.contactMap {
+  margin-top: 30px;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 18px 42px rgba(7, 19, 34, 0.12);
 }
 
-.sectionMap {
-    padding: 0;
-    width: 90%;
-    margin: 10px auto 50px;
+.contactMap__header {
+  padding: 28px 30px 22px;
 }
 
-.leaflet-container {
-    padding: 0;
-    border-radius: 10px;
-    box-shadow: 0px 10px 10px black;
-    transition: 0.2s;
+.contactMap__header h2 {
+  margin: 0 0 8px;
+  color: #0d37a9;
+  font-size: 2rem;
 }
 
-.leaflet-container:hover {
-    box-shadow: 0px 0px 0px rgb(0, 0, 0);
-    scale: 0.99;
+.contactMap__header p {
+  margin: 0;
+  color: #31425a;
 }
 
-/* Add styles for Leaflet */
-.leaflet-container {
-  height: 400px;
+.contactMap .leaflet-container {
   width: 100%;
+  height: 420px;
 }
 
-.leaflet-popup-content-wrapper, .leaflet-popup-tip {
-  background: #f9f9f9;
-  color: #333333;
-  box-shadow: 0 3px 14px rgba(0,0,0,0.2);
-  border-radius: 2px;
+@media screen and (max-width: 940px) {
+  .contactCards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .contactHero {
+    padding: 124px 20px 72px;
+  }
+
+  .contactPanel {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .contactCards {
+    grid-template-columns: 1fr;
+  }
 }

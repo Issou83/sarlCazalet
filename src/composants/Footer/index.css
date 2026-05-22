@@ -1,30 +1,61 @@
 .footer {
-  display: flex;
-  justify-content: space-between;
-  background: linear-gradient(0.25turn, #bdc2c7, rgb(13, 55, 169) 30%);
-  width: 100%;
-  height: 100px;
-}
-
-.footerElement {
-    margin: 10px 0;
-  width: 33.33%;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 28px;
   align-items: center;
+  padding: 34px 7vw;
+  color: #ffffff;
+  background: #071322;
 }
 
-.linkeIN {
-  display: flex;
-  flex-direction: column;
+.footer__brand {
+  display: grid;
+  gap: 8px;
 }
 
-
-.carteVisite {
-    height: 100%;
-    max-width: 100%;
+.footer__brand strong {
+  color: #f2c14e;
+  font-size: 1.35rem;
 }
 
-.linkFooter {
-  color: white;
+.footer__brand span {
+  color: #c8d4e6;
+  line-height: 1.5;
+}
+
+.footer__card {
+  width: min(280px, 32vw);
+  border-radius: 6px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+}
+
+.footer__links {
+  display: grid;
+  justify-items: end;
+  gap: 8px;
+}
+
+.footer__links a,
+.footer__links span {
+  color: #edf3ff;
+}
+
+.footer__links a:hover {
+  color: #f2c14e;
+}
+
+@media screen and (max-width: 760px) {
+  .footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer__card {
+    width: min(320px, 100%);
+    margin: 0 auto;
+  }
+
+  .footer__links {
+    justify-items: center;
+  }
 }

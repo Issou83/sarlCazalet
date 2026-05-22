@@ -1,25 +1,24 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
-
+import CarteDeVisite from "../../assets/carteVisite.webp";
 import "./index.css";
-import CarteDeVisite from "../../assets/carteVisite.webp"
 
-const Footer = () => {
+function Footer() {
   return (
-    <div className="footer">
-      <div className="footerElement linkeIN">
-        <NavLink className="linkFooter" to="./contact">Contact</NavLink>
-        <NavLink className="linkFooter" >Mentions légales</NavLink>
+    <footer className="footer">
+      <div className="footer__brand">
+        <strong>SARL Cazalet</strong>
+        <span>Hydrocurage, assainissement et location de matériel à Arudy.</span>
       </div>
-      <div className="footerElement">
-        {/* <p>2</p> */}
-        <img src={CarteDeVisite} alt="Carte de visite" className="carteVisite" />
-      </div>
-      <div className="footerElement">
-       <NavLink className="linkFooter" to="https://nkdevweb.netlify.app/">Créé par NKTdev.web </NavLink>
-      </div>
-    </div>
+
+      <img src={CarteDeVisite} alt="Carte de visite SARL Cazalet" className="footer__card" />
+
+      <nav className="footer__links" aria-label="Liens secondaires">
+        <NavLink to="/contact">Contact</NavLink>
+        <span>Mentions légales</span>
+        <a href="https://nkdevweb.netlify.app/">Créé par NKTdev.web</a>
+      </nav>
+    </footer>
   );
-};
+}
 
 export default Footer;

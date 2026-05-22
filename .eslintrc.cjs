@@ -1,5 +1,12 @@
 module.exports = {
+  root: true,
   env: { browser: true, es2020: true },
+  ignorePatterns: [
+    'src/Pages/Admin/**',
+    'src/composants/Admin/**',
+    'src/composants/Cookies/**',
+    'src/composants/NouveauLocations/**',
+  ],
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
@@ -11,5 +18,6 @@ module.exports = {
   plugins: ['react-refresh'],
   rules: {
     'react-refresh/only-export-components': 'warn',
+    'react/no-unescaped-entities': 'off',
   },
 }

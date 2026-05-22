@@ -1,74 +1,51 @@
-import React, { useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
-
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import logoCam from "/camion11.svg";
-import camion22 from "../../assets/camion22.svg";
-
 import "./index.css";
 
-const Header = () => {
-  const location = useLocation();
+const navItems = [
+  { to: "/", label: "Accueil" },
+  { to: "/services", label: "Services" },
+  { to: "/locations", label: "Locations" },
+  { to: "/contact", label: "Contact" },
+];
 
+function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const checkScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
+    const checkScroll = () => setIsScrolled(window.scrollY > 12);
+    checkScroll();
     window.addEventListener("scroll", checkScroll);
     return () => window.removeEventListener("scroll", checkScroll);
   }, []);
-  
-  console.log(location.pathname);
 
   return (
-    <div className="top">
-      <div className={`header ${isScrolled ? "small" : "height"}`}>
-        <img className="logoCam" src={logoCam} alt="logo"></img>
-        <h2 className="title">sarl CAZALET</h2>
-        <div className={`navigation ${isScrolled ? "row" : "column"}`}>
-          <NavLink
-            to="/"
-            className={`btnNav ${location.pathname === "/" ? "urlActive" : ""}`}
-          >
-            Accueil
-          </NavLink>
+    <header className={`siteHeader ${isScrolled ? "siteHeader--compact" : ""}`}>
+      <NavLink className="siteHeader__brand" to="/">
+        <img src={logoCam} alt="" />
+        <span>SARL Cazalet</span>
+      </NavLink>
 
+      <nav className="siteHeader__nav" aria-label="Navigation principale">
+        {navItems.map((item) => (
           <NavLink
-            to="/services"
-            className={`btnNav ${
-              location.pathname === "/services" ? "urlActive" : ""
-            }`}
+            className={({ isActive }) =>
+              `siteHeader__link ${isActive ? "siteHeader__link--active" : ""}`
+            }
+            to={item.to}
+            key={item.to}
           >
-            Services
+            {item.label}
           </NavLink>
-          <NavLink
-            to="/locations"
-            className={`btnNav ${
-              location.pathname === "/locations" ? "urlActive" : ""
-            }`}
-          >
-            Locations
-          </NavLink>
-          <NavLink
-            to="/contact"
-            className={`btnNav ${
-              location.pathname === "/contact" ? "urlActive" : ""
-            }`}
-          >
-            Contact
-          </NavLink>
-        </div>
-        <img className="camion22" src={camion22} alt=""></img>
-        <div className="tel">
-        <a href="tel:0559308134" className="btnTel">
-            05 59 30 81 34
-        </a>
-        </div>
-      </div>
-    </div>
+        ))}
+      </nav>
+
+      <a className="siteHeader__phone" href="tel:0559308134">
+        05 59 30 81 34
+      </a>
+    </header>
   );
-};
+}
 
 export default Header;
