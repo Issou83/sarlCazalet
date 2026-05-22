@@ -6,7 +6,7 @@ const fallbackItems = [
     _id: "wc",
     title: "WC autonomes",
     description: "WC pour évènements, chantiers et manifestations.",
-    imageUrl: "/camion1.png",
+    imageUrl: "/camion2.png",
   },
   {
     _id: "bruleur",
@@ -39,6 +39,29 @@ const fallbackItems = [
     imageUrl: "/Soufleur.jpg",
   },
 ];
+
+const localImagesByTitle = {
+  "wc autonomes": "/camion2.png",
+  "bruleur de mauvaises herbes": "/Bruleurs.png",
+  "brûleur de mauvaises herbes": "/Bruleurs.png",
+  motoculteur: "/Motoculteur.jpg",
+  brouette: "/Brouette.jpg",
+  rotofil: "/Rotofil.jpg",
+  "souffleur thermique": "/Soufleur.jpg",
+};
+
+const normalizeTitle = (title = "") =>
+  title
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+
+const getReliableImageUrl = (item) =>
+  localImagesByTitle[normalizeTitle(item.title)] || item.imageUrl || "/camion2.png";
+
+const getCleanTitle = (title = "") => title.replace(/\s+/g, " ").trim();
 
 function Locations() {
   const [items, setItems] = useState([]);
@@ -109,9 +132,17 @@ function Locations() {
           <div className="locationsGrid">
             {items.map((item) => (
               <article className="locationCard" key={item._id || item.title}>
-                <img src={item.imageUrl} alt={item.title} loading="lazy" />
+                <img
+                  src={getReliableImageUrl(item)}
+                  alt={getCleanTitle(item.title)}
+                  loading="lazy"
+                  onError={(event) => {
+                    event.currentTarget.onerror = null;
+                    event.currentTarget.src = "/camion2.png";
+                  }}
+                />
                 <div className="locationCard__body">
-                  <h3>{item.title}</h3>
+                  <h3>{getCleanTitle(item.title)}</h3>
                   <p>{item.description}</p>
                 </div>
               </article>
