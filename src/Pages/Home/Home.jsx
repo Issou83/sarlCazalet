@@ -49,9 +49,15 @@ const services = [
   },
   {
     title: "Location de matériel",
-    text: "WC autonomes, chauffage, matériel d'entretien extérieur et équipements de chantier.",
-    to: "/location-wc-autonome-arudy-pau-oloron",
+    text: "Chauffage, motoculteur, brouette, rotofil, souffleur et matériel d'entretien extérieur.",
+    to: "/locations",
     className: "homeService--location",
+  },
+  {
+    title: "WC autonomes",
+    text: "Toilettes mobiles pour chantiers, foires, fêtes, manifestations et évènements.",
+    to: "/location-wc-autonome-arudy-pau-oloron",
+    className: "homeService--wc",
   },
 ];
 

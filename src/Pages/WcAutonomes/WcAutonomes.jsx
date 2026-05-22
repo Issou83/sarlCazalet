@@ -80,7 +80,7 @@ const wcSchema = {
         "@type": "ServiceChannel",
         servicePhone: businessInfo.phone,
       },
-      image: `${siteUrl}/camion2.png`,
+      image: `${siteUrl}/wc-autonomes.jpg`,
       description:
         "Location de WC autonomes pour chantiers, évènements, manifestations et besoins temporaires autour d'Arudy, Pau et Oloron-Sainte-Marie.",
     },
@@ -106,7 +106,7 @@ function WcAutonomes() {
         title="Location WC autonome Arudy, Pau, Oloron | SARL Cazalet"
         description="Location de WC autonomes et toilettes mobiles pour chantiers, évènements, foires, fêtes et manifestations autour d'Arudy, Pau et Oloron-Sainte-Marie."
         path="/location-wc-autonome-arudy-pau-oloron"
-        image="/camion2.png"
+        image="/wc-autonomes.jpg"
         schema={wcSchema}
       />
 

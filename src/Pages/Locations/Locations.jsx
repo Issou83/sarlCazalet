@@ -101,7 +101,7 @@ function Locations() {
         title="Location matériel Arudy | WC autonomes, chantier, évènement"
         description="Location de matériel à Arudy : WC autonomes pour chantiers et évènements, chauffage, motoculteur, brouette, rotofil, souffleur, matériel de désherbage mécanique et fauchage autour de Pau et Oloron."
         path="/locations"
-        image="/camion2.png"
+        image="/wc-autonomes.jpg"
         schema={localBusinessSchema}
       />
 
@@ -130,7 +130,7 @@ function Locations() {
         </div>
 
         <article className="locationsFeatured">
-          <img src="/camion2.png" alt="WC autonomes disponibles en location" />
+          <img src="/wc-autonomes.jpg" alt="WC autonomes disponibles en location" />
           <div>
             <p className="sectionKicker">Service prioritaire local</p>
             <h2>Location de WC autonomes à Arudy, Pau et Oloron-Sainte-Marie</h2>

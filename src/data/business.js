@@ -32,7 +32,7 @@ export const localBusinessSchema = {
   url: siteUrl,
   telephone: businessInfo.phone,
   email: businessInfo.email,
-  image: `${siteUrl}/camion2.png`,
+  image: `${siteUrl}/wc-autonomes.jpg`,
   priceRange: "Sur devis",
   address: {
     "@type": "PostalAddress",
