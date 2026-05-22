@@ -1,4 +1,6 @@
 import { NavLink } from "react-router-dom";
+import SEO from "../../composants/SEO/SEO";
+import { localBusinessSchema } from "../../data/business";
 import "./index.css";
 
 const serviceDetails = [
@@ -20,17 +22,35 @@ const serviceDetails = [
       "Matériel adapté aux réseaux domestiques et professionnels",
     ],
   },
+  {
+    title: "Désherbage mécanique et fauchage",
+    points: [
+      "Désherbage mécanique pour limiter l'usage de produits chimiques",
+      "Fauchage et entretien d'espaces extérieurs",
+      "Intervention pour collectivités, particuliers et professionnels",
+      "Solutions adaptées aux abords, terrains, accès et zones à entretenir",
+    ],
+  },
 ];
 
 function Services() {
   return (
     <main className="servicesPage">
+      <SEO
+        title="Hydrocurage, vidange, débouchage et fauchage | Arudy"
+        description="SARL Cazalet intervient autour d'Arudy, Pau et Oloron-Sainte-Marie pour hydrocurage, vidange de fosses septiques, débouchage de canalisations, inspection caméra, désherbage mécanique et fauchage."
+        path="/services"
+        image="/camion2.png"
+        schema={localBusinessSchema}
+      />
+
       <section className="servicesHero">
         <p className="servicesHero__eyebrow">Nos services</p>
-        <h1>Assainissement, hydrocurage et inspection caméra</h1>
+        <h1>Assainissement, hydrocurage, débouchage et entretien extérieur</h1>
         <p>
-          SARL Cazalet intervient autour d'Arudy pour entretenir, déboucher et
-          diagnostiquer vos installations d'assainissement avec réactivité.
+          SARL Cazalet intervient autour d'Arudy pour vidanger, déboucher,
+          diagnostiquer et entretenir vos installations, terrains et accès avec
+          réactivité.
         </p>
         <NavLink className="button button--primary" to="/contact">
           Planifier une intervention
@@ -52,11 +72,11 @@ function Services() {
 
       <section className="servicesNotice">
         <div>
-          <h2>Un doute sur votre installation ?</h2>
+          <h2>Un doute sur votre besoin ?</h2>
           <p>
-            Décrivez votre besoin par téléphone : type d'installation, urgence,
-            accès au chantier et localisation. Nous vous orientons vers la
-            solution la plus adaptée.
+            Décrivez votre demande par téléphone : assainissement, canalisation,
+            entretien extérieur, urgence, accès au chantier et localisation.
+            Nous vous orientons vers la solution la plus adaptée.
           </p>
         </div>
         <a className="button button--secondaryDark" href="tel:0559308134">

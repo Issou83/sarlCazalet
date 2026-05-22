@@ -5,6 +5,8 @@ import "leaflet/dist/leaflet.css";
 import iconRetinaUrl from "leaflet/dist/images/marker-icon-2x.png";
 import iconUrl from "leaflet/dist/images/marker-icon.png";
 import shadowUrl from "leaflet/dist/images/marker-shadow.png";
+import SEO from "../../composants/SEO/SEO";
+import { localBusinessSchema } from "../../data/business";
 import Telephone from "../../assets/tel.png";
 import Smartphone from "../../assets/smartphone.png";
 import Mail from "../../assets/mail.png";
@@ -25,14 +27,23 @@ function Contact() {
 
   return (
     <main className="contactPage">
+      <SEO
+        title="Contact SARL Cazalet Arudy | Intervention Pau Oloron vallée d'Ossau"
+        description="Contactez SARL Cazalet à Arudy pour hydrocurage, vidange, débouchage de canalisations, inspection caméra, désherbage mécanique, fauchage et location de WC autonomes dans un rayon d'environ 50 km."
+        path="/contact"
+        image="/camion2.png"
+        schema={localBusinessSchema}
+      />
+
       <section className="contactHero">
         <div>
           <p className="contactHero__eyebrow">Contact et interventions</p>
           <h1>Basés à Arudy, disponibles dans un rayon d'environ 50 km.</h1>
           <p>
             SARL Cazalet intervient entre Pau, Oloron-Sainte-Marie et la vallée
-            d'Ossau pour les travaux de vidange, d'hydrocurage, d'inspection
-            caméra et de location de matériel.
+            d'Ossau pour les travaux de vidange, d'hydrocurage, de débouchage
+            de canalisations, d'inspection caméra, de désherbage mécanique, de
+            fauchage et de location de matériel.
           </p>
         </div>
       </section>

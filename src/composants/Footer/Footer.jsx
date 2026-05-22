@@ -7,7 +7,11 @@ function Footer() {
     <footer className="footer">
       <div className="footer__brand">
         <strong>SARL Cazalet</strong>
-        <span>Hydrocurage, assainissement et location de matériel à Arudy.</span>
+        <span>
+          Vidange fosses septiques, débouchage canalisations, désherbage
+          mécanique, fauchage, hydrocurage, assainissement et location de
+          matériel à Arudy.
+        </span>
       </div>
 
       <img src={CarteDeVisite} alt="Carte de visite SARL Cazalet" className="footer__card" />

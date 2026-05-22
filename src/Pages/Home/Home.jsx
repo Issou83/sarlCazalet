@@ -1,4 +1,6 @@
 import { NavLink } from "react-router-dom";
+import SEO from "../../composants/SEO/SEO";
+import { localBusinessSchema } from "../../data/business";
 import Truck from "../../assets/truck-fast-outline.svg";
 import Hands from "../../assets/handshake.png";
 import Timer from "../../assets/timer.png";
@@ -48,7 +50,7 @@ const services = [
   {
     title: "Location de matériel",
     text: "WC autonomes, chauffage, matériel d'entretien extérieur et équipements de chantier.",
-    to: "/locations",
+    to: "/location-wc-autonome-arudy-pau-oloron",
     className: "homeService--location",
   },
 ];
@@ -56,12 +58,21 @@ const services = [
 function Home() {
   return (
     <main className="home">
+      <SEO
+        title="SARL Cazalet | Assainissement et location de WC autonomes à Arudy"
+        description="SARL Cazalet à Arudy : hydrocurage, vidange de fosses septiques, débouchage de canalisations, inspection caméra, désherbage mécanique, fauchage et location de WC autonomes autour de Pau et Oloron."
+        path="/"
+        image="/camion2.png"
+        schema={localBusinessSchema}
+      />
+
       <section className="homeHero">
         <div className="homeHero__content">
           <p className="homeHero__eyebrow">Assainissement et location de matériel à Arudy</p>
           <h1>SARL Cazalet</h1>
           <p className="homeHero__lead">
-            Hydrocurage, vidange de fosses septiques, inspection caméra et location
+            Hydrocurage, vidange de fosses septiques, débouchage de canalisations,
+            inspection caméra, désherbage mécanique, fauchage et location
             d'équipements pour particuliers, professionnels et collectivités.
           </p>
           <div className="homeHero__actions">
@@ -88,12 +99,12 @@ function Home() {
       <section className="homeIntro">
         <div>
           <p className="sectionKicker">Entreprise locale</p>
-          <h2>Une équipe équipée pour les interventions d'assainissement du quotidien comme les urgences.</h2>
+          <h2>Une équipe équipée pour l'assainissement, le débouchage et l'entretien extérieur.</h2>
         </div>
         <p>
           Implantée à Arudy, SARL Cazalet intervient dans un rayon d'environ 50 km
-          avec du matériel adapté aux réseaux d'assainissement, aux évènements,
-          aux chantiers et aux besoins d'entretien extérieur.
+          avec du matériel adapté aux réseaux d'assainissement, au débouchage,
+          aux évènements, aux chantiers, au désherbage mécanique et au fauchage.
         </p>
       </section>
 

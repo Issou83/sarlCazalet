@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import SEO from "../../composants/SEO/SEO";
+import { localBusinessSchema } from "../../data/business";
 import "./index.css";
 
 const fallbackItems = [
@@ -94,12 +97,21 @@ function Locations() {
 
   return (
     <main className="locationsPage">
+      <SEO
+        title="Location matériel Arudy | WC autonomes, chantier, évènement"
+        description="Location de matériel à Arudy : WC autonomes pour chantiers et évènements, chauffage, motoculteur, brouette, rotofil, souffleur, matériel de désherbage mécanique et fauchage autour de Pau et Oloron."
+        path="/locations"
+        image="/camion2.png"
+        schema={localBusinessSchema}
+      />
+
       <section className="locationsHero">
         <p className="locationsHero__eyebrow">Location de matériel</p>
         <h1>Des équipements prêts à l'emploi pour vos chantiers et évènements.</h1>
         <p>
           Matériel entretenu, disponible localement et adapté aux particuliers,
-          professionnels, associations et collectivités.
+          professionnels, associations et collectivités, avec des solutions pour
+          les chantiers, évènements, extérieurs, fauchage et désherbage mécanique.
         </p>
       </section>
 
@@ -116,6 +128,21 @@ function Locations() {
             Réserver par téléphone
           </a>
         </div>
+
+        <article className="locationsFeatured">
+          <img src="/camion2.png" alt="WC autonomes disponibles en location" />
+          <div>
+            <p className="sectionKicker">Service prioritaire local</p>
+            <h2>Location de WC autonomes à Arudy, Pau et Oloron-Sainte-Marie</h2>
+            <p>
+              Pour chantiers, fêtes, foires, évènements sportifs, manifestations
+              associatives et besoins temporaires sans sanitaires sur place.
+            </p>
+            <NavLink className="button button--primary" to="/location-wc-autonome-arudy-pau-oloron">
+              Voir la page WC autonomes
+            </NavLink>
+          </div>
+        </article>
 
         {hasError && (
           <p className="locationsAlert">

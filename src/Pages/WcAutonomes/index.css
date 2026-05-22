@@ -1,0 +1,293 @@
+.wcPage {
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+.wcHero {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  padding: 140px 7vw 88px;
+  color: #ffffff;
+  background:
+    linear-gradient(90deg, rgba(5, 15, 31, 0.92) 0%, rgba(5, 15, 31, 0.68) 52%, rgba(5, 15, 31, 0.22) 100%),
+    url("/camion2.png") center / cover no-repeat;
+}
+
+.wcHero__content {
+  max-width: 820px;
+}
+
+.wcHero__eyebrow {
+  margin: 0 0 14px;
+  color: #f2c14e;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.wcHero h1 {
+  margin: 0;
+  font-size: clamp(2.8rem, 6vw, 5.6rem);
+  line-height: 0.98;
+}
+
+.wcHero p {
+  max-width: 700px;
+  margin: 24px 0 0;
+  color: #edf3ff;
+  font-family: "Lora", serif;
+  font-size: 1.22rem;
+  line-height: 1.7;
+}
+
+.wcHero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.wcLocalProof,
+.wcAdvantages,
+.wcSplit,
+.wcArea,
+.wcFaq {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.wcLocalProof {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.78fr);
+  gap: 48px;
+  margin-top: 82px;
+}
+
+.wcLocalProof h2,
+.wcArea h2,
+.wcFaq h2 {
+  margin: 0;
+  color: #122033;
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  line-height: 1.05;
+}
+
+.wcLocalProof > p,
+.wcArea p {
+  margin: 0;
+  color: #31425a;
+  font-family: "Lora", serif;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.wcAdvantages {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 52px;
+}
+
+.wcAdvantage {
+  min-height: 210px;
+  padding: 28px 24px;
+  background: #ffffff;
+  box-shadow: 0 16px 38px rgba(7, 19, 34, 0.1);
+}
+
+.wcAdvantage:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.wcAdvantage:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.wcAdvantage h2 {
+  margin: 0 0 12px;
+  color: #0d37a9;
+  font-size: 1.35rem;
+}
+
+.wcAdvantage p {
+  margin: 0;
+  color: #31425a;
+  line-height: 1.6;
+}
+
+.wcSplit {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.wcPanel {
+  padding: 34px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 16px 38px rgba(7, 19, 34, 0.1);
+}
+
+.wcPanel--dark {
+  color: #ffffff;
+  background: #071322;
+}
+
+.wcPanel h2 {
+  margin: 0 0 22px;
+  color: #0d37a9;
+  font-size: 2rem;
+}
+
+.wcPanel--dark h2 {
+  color: #f2c14e;
+}
+
+.wcPanel ul {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wcPanel li {
+  position: relative;
+  padding-left: 28px;
+  color: #31425a;
+  line-height: 1.55;
+}
+
+.wcPanel--dark li {
+  color: #edf3ff;
+}
+
+.wcPanel li::before {
+  content: "";
+  position: absolute;
+  top: 0.7em;
+  left: 0;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #f2c14e;
+}
+
+.wcArea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  margin-top: 48px;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  color: #ffffff;
+  background: #0d37a9;
+  border-radius: 8px;
+}
+
+.wcArea h2,
+.wcArea p {
+  color: #ffffff;
+}
+
+.wcArea h2 {
+  max-width: 760px;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+
+.wcArea p {
+  max-width: 820px;
+  margin-top: 14px;
+}
+
+.wcFaq {
+  padding-top: 76px;
+  padding-bottom: 96px;
+}
+
+.wcFaq__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 32px;
+}
+
+.wcFaq__item {
+  padding: 26px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 14px 32px rgba(7, 19, 34, 0.09);
+}
+
+.wcFaq__item h3 {
+  margin: 0 0 10px;
+  color: #0d37a9;
+  font-size: 1.3rem;
+}
+
+.wcFaq__item p {
+  margin: 0;
+  color: #31425a;
+  line-height: 1.65;
+}
+
+@media screen and (max-width: 940px) {
+  .wcLocalProof,
+  .wcSplit,
+  .wcFaq__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wcAdvantages {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .wcAdvantage,
+  .wcAdvantage:first-child,
+  .wcAdvantage:last-child {
+    border-radius: 8px;
+  }
+
+  .wcArea {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .wcHero {
+    min-height: 640px;
+    padding: 124px 20px 72px;
+    background-position: 64% center;
+  }
+
+  .wcHero__actions,
+  .wcHero__actions .button {
+    width: 100%;
+  }
+
+  .wcLocalProof,
+  .wcAdvantages,
+  .wcSplit,
+  .wcArea,
+  .wcFaq {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .wcAdvantages {
+    grid-template-columns: 1fr;
+  }
+
+  .wcPanel,
+  .wcFaq__item {
+    padding: 24px 20px;
+  }
+}
